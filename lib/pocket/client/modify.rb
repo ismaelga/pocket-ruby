@@ -4,8 +4,7 @@ module Pocket
     module Modify
       # required params: actions, consumer_key, access_token
       def modify actions
-        response = connection.post("/v3/send", {actions: actions})
-        response.body
+        connection.post("/v3/send", {actions: actions})
       end
     end
   end

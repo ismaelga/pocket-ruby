@@ -4,8 +4,7 @@ module Pocket
     module Add
       # required params: url, consumer_key, access_token
       def add params
-        response = connection.post("/v3/add", params)
-        response.body
+        connection.post("/v3/add", params)
       end
     end
   end

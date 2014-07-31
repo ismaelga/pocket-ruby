@@ -4,8 +4,7 @@ module Pocket
     module Retrieve
       # required params: consumer_key, access_token
       def retrieve params=[]
-        response = connection.post("/v3/get", params)
-        response.body
+        connection.post("/v3/get", params)
       end
     end
   end
